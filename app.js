@@ -9,7 +9,6 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // Cargar ficheros rutas
-var auth_routes = require('./routes/auth-routes');
 var test_routes = require('./routes/testing-routes');
 
 // Middlewares 
@@ -31,7 +30,6 @@ app.use((req, res, next) => {
 
 
 // Añadir prefijos a rutas / Cargar rutas
-app.use('/api', auth_routes);
 app.use('/api', test_routes);
 
 // Exportar modulo (fichero actual)
